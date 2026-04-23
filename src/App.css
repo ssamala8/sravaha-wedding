@@ -25,18 +25,17 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  /* background: rgba(0,0,0,0.5); */
   z-index: -2;
 }
 
-/* 📦 CONTAINER (MOBILE FIX INCLUDED) */
+/* 📦 CONTAINER */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
 
   min-height: 100vh;
-  min-height: 100dvh; /* 🔥 mobile fix */
+  min-height: 100dvh;
 
   padding: 20px;
   position: relative;
@@ -84,7 +83,17 @@ body {
   color: #555;
 }
 
+/* NAMES */
+.names {
+  font-size: 28px;
+  color: #c94c4c;
+  margin: 0;
+  line-height: 1.1;
+}
+
 .and {
+  margin: 0;
+  line-height: 1;
   font-size: 18px;
   color: #444;
 }
@@ -101,28 +110,20 @@ body {
   box-shadow: 0 0 20px rgba(212,175,55,0.4);
 }
 
+/* 🔥 FINAL IMAGE FIX (CRISP) */
 .image-wrapper img {
-  width: 105%;
-  height: 105%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 
   /* 🎯 FACE CENTER */
   object-position: center 30%;
+
+  /* sharpness fix */
+  image-rendering: auto;
+  backface-visibility: hidden;
 }
 
-/* 💍 NAMES */
-.names {
-  font-size: 28px;
-
-  color: #c94c4c;
-   margin: 0; /* 🔥 remove default spacing */
-  line-height: 1.1;
-}
-
-.and {
-  margin: 0; /* remove space above & below */
-  line-height: 1;
-}
 /* DETAILS */
 .details {
   font-size: 14px;
