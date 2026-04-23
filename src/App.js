@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import couple from "./assets/1J2A3673.JPG";
+import couple from "./assets/1J2A2542.JPG";
 import video from "./assets/video.mp4";
 
 function App() {
@@ -38,7 +38,11 @@ function App() {
 
         {/* IMAGE */}
         <div className="image-wrapper">
-          <img src={couple} alt="couple" />
+          <img  src={couple}
+  alt="couple"
+  loading="lazy"
+  onLoad={(e) => e.target.style.opacity = 1}
+  style={{ opacity: 0 }} />
         </div>
 
         {/* NAMES */}
