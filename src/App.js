@@ -12,7 +12,7 @@ function App() {
   };
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/917730885405", "_blank");
+    window.open("https://wa.me/919573554954", "_blank");
   };
 
   return (
@@ -46,6 +46,7 @@ function App() {
         <p className="and">&</p>
         <h1 className="names">Neha</h1>
 
+
         {/* DETAILS */}
         <p className="details">Friday, May 1, 2026</p>
 
@@ -70,6 +71,12 @@ function App() {
         <p className="footer">
           We look forward to your gracious presence ❤️
         </p>
+
+        
+         <p className="family-heading">Invited by</p>
+      <p className="family">
+        Samala's Family & Chalamala's Family
+      </p>
 
       </div>
     </div>

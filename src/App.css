@@ -113,10 +113,16 @@ body {
 /* 💍 NAMES */
 .names {
   font-size: 28px;
-  margin: 5px 0;
+
   color: #c94c4c;
+   margin: 0; /* 🔥 remove default spacing */
+  line-height: 1.1;
 }
 
+.and {
+  margin: 0; /* remove space above & below */
+  line-height: 1;
+}
 /* DETAILS */
 .details {
   font-size: 14px;
