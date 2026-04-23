@@ -64,7 +64,7 @@ function App() {
         <button onClick={openMap}>View Location</button>
 
         <button className="rsvp" onClick={openWhatsApp}>
-          RSVP on WhatsApp
+          Contact on WhatsApp
         </button>
 
         {/* FOOTER */}
