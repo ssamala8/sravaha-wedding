@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+/* 🌍 GLOBAL */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 🎬 VIDEO BACKGROUND */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+
+  /* cinematic effect */
+  filter: brightness(0.3) blur(1px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 🌑 DARK OVERLAY */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0,0,0,0.5); */
+  z-index: -2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 📦 CONTAINER (MOBILE FIX INCLUDED) */
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+  min-height: 100vh;
+  min-height: 100dvh; /* 🔥 mobile fix */
+
+  padding: 20px;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+/* 💍 CARD */
+.card {
+  width: 360px;
+  max-width: 90%;
+  margin: auto;
+
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 30px 25px;
+  text-align: center;
+
+  box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+  border: 2px solid rgba(212,175,55,0.6);
+
+  animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes App-logo-spin {
+/* 🎬 ENTRY ANIMATION */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TEXT */
+.top-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.invite-line {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.and {
+  font-size: 18px;
+  color: #444;
+}
+
+/* 🖼️ IMAGE */
+.image-wrapper {
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 6px solid #f0e6d2;
+  box-shadow: 0 0 20px rgba(212,175,55,0.4);
+}
+
+.image-wrapper img {
+  width: 105%;
+  height: 105%;
+  object-fit: cover;
+
+  /* 🎯 FACE CENTER */
+  object-position: center 30%;
+}
+
+/* 💍 NAMES */
+.names {
+  font-size: 28px;
+  margin: 5px 0;
+  color: #c94c4c;
+}
+
+/* DETAILS */
+.details {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #333;
+}
+
+.location {
+  font-size: 13px;
+  color: #666;
+}
+
+/* 🔘 BUTTONS */
+button {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  color: white;
+
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* 💬 RSVP */
+.rsvp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+/* ❤️ FOOTER */
+.footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  .image-wrapper {
+    width: 150px;
+    height: 150px;
   }
 }
